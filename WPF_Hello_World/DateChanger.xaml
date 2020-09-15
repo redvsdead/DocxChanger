@@ -1,0 +1,28 @@
+﻿<Window x:Class="WPF_Hello_World.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Hello_World"
+        mc:Ignorable="d"
+        Title="Date Changer" Height="502.204" Width="711.359" ResizeMode="NoResize" Cursor="Hand" Background="#FFBBC8B2" FontFamily="Snap ITC" FontSize="48" Foreground="Black">
+    <Grid Margin="0,0,-6.6,-0.2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="213*"/>
+            <ColumnDefinition Width="408*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="TaskTextBlock" HorizontalAlignment="Left" Height="69" Margin="39,75,-289.6,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="941" FontSize="22" FontFamily="Bell MT" Grid.ColumnSpan="3"><Run Text="Введите полный путь папки, в которой находятся документ"/><Run Text="ы"/><Run Text="                   "/></TextBlock>
+        <TextBox x:Name="path" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="36" Margin="40,108,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="615" FontSize="20" FontFamily="Lucida Console" IsUndoEnabled="True"/>
+        <TextBlock HorizontalAlignment="Left" Height="69" Margin="39,255,-289.6,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="941" FontSize="22" FontFamily="Bell MT" Grid.ColumnSpan="3"><Run Text="Введите "/><Run Text="актуальную дату"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="69" Margin="39,169,-35.6,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="687" FontSize="22" FontFamily="Bell MT" Grid.ColumnSpan="3" RenderTransformOrigin="0.672,1.136"><Run Text="Введите "/><Run Text="устаре"/><Run Text="вшую"/><Run Text=" "/><Run Text="дату, требующую замены"/></TextBlock>
+        <Button x:Name="processButton" Content="Заменить" HorizontalAlignment="Left" Height="45" Margin="248.2,384,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="194" FontSize="20" FontFamily="Bell MT" Grid.Column="1" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="oldDate" HorizontalAlignment="Left" Height="36" Margin="39,202,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" FontSize="20" FontFamily="Lucida Console" IsUndoEnabled="True" TextChanged="OldDate_TextChanged"/>
+        <TextBox x:Name="newDate" HorizontalAlignment="Left" Height="36" Margin="39,288,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" FontSize="20" FontFamily="Lucida Console" IsUndoEnabled="True" TextChanged="NewDate_TextChanged"/>
+
+    </Grid>
+</Window>
